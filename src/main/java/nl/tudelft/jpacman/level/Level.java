@@ -1,15 +1,9 @@
 package nl.tudelft.jpacman.level;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 import nl.tudelft.jpacman.board.Board;
 import nl.tudelft.jpacman.board.Direction;
@@ -23,7 +17,6 @@ import nl.tudelft.jpacman.npc.Ghost;
  *
  * @author Jeroen Roosen 
  */
-@SuppressWarnings("PMD.TooManyMethods")
 public class Level {
 
     /**
@@ -45,7 +38,7 @@ public class Level {
     /**
      * The NPCs of this level and, if they are running, their schedules.
      */
-    private final Map<Ghost, ScheduledExecutorService> npcs;
+    private final NPCScheduler npcScheduler;
 
     /**
      * <code>true</code> iff this level is currently in progress, i.e. players
@@ -98,10 +91,7 @@ public class Level {
 
         this.board = board;
         this.inProgress = false;
-        this.npcs = new HashMap<>();
-        for (Ghost ghost : ghosts) {
-            npcs.put(ghost, null);
-        }
+        this.npcScheduler = new NPCScheduler(ghosts, this);
         this.startSquares = startPositions;
         this.startSquareIndex = 0;
         this.players = new ArrayList<>();
@@ -203,7 +193,7 @@ public class Level {
             if (isInProgress()) {
                 return;
             }
-            startNPCs();
+            npcScheduler.startNPCs();
             inProgress = true;
             updateObservers();
         }
@@ -218,34 +208,8 @@ public class Level {
             if (!isInProgress()) {
                 return;
             }
-            stopNPCs();
+            npcScheduler.stopNPCs();
             inProgress = false;
-        }
-    }
-
-    /**
-     * Starts all NPC movement scheduling.
-     */
-    private void startNPCs() {
-        for (final Ghost npc : npcs.keySet()) {
-            ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-
-            service.schedule(new NpcMoveTask(service, npc),
-                npc.getInterval() / 2, TimeUnit.MILLISECONDS);
-
-            npcs.put(npc, service);
-        }
-    }
-
-    /**
-     * Stops all NPC movement scheduling and interrupts any movements being
-     * executed.
-     */
-    private void stopNPCs() {
-        for (Entry<Ghost, ScheduledExecutorService> entry : npcs.entrySet()) {
-            ScheduledExecutorService schedule = entry.getValue();
-            assert schedule != null;
-            schedule.shutdownNow();
         }
     }
 
@@ -310,47 +274,6 @@ public class Level {
         }
         assert pellets >= 0;
         return pellets;
-    }
-
-    /**
-     * A task that moves an NPC and reschedules itself after it finished.
-     *
-     * @author Jeroen Roosen
-     */
-    private final class NpcMoveTask implements Runnable {
-
-        /**
-         * The service executing the task.
-         */
-        private final ScheduledExecutorService service;
-
-        /**
-         * The NPC to move.
-         */
-        private final Ghost npc;
-
-        /**
-         * Creates a new task.
-         *
-         * @param service
-         *            The service that executes the task.
-         * @param npc
-         *            The NPC to move.
-         */
-        NpcMoveTask(ScheduledExecutorService service, Ghost npc) {
-            this.service = service;
-            this.npc = npc;
-        }
-
-        @Override
-        public void run() {
-            Direction nextMove = npc.nextMove();
-            if (nextMove != null) {
-                move(npc, nextMove);
-            }
-            long interval = npc.getInterval();
-            service.schedule(this, interval, TimeUnit.MILLISECONDS);
-        }
     }
 
     /**
