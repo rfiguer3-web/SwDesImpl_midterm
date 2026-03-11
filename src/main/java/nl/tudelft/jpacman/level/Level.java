@@ -1,9 +1,7 @@
 package nl.tudelft.jpacman.level;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import nl.tudelft.jpacman.board.Board;
 import nl.tudelft.jpacman.board.Direction;
@@ -17,6 +15,7 @@ import nl.tudelft.jpacman.npc.Ghost;
  *
  * @author Jeroen Roosen 
  */
+@SuppressWarnings("PMD.TooManyMethods")
 public class Level {
 
     /**
@@ -69,7 +68,7 @@ public class Level {
     /**
      * The objects observing this level.
      */
-    private final Set<LevelObserver> observers;
+    private final LevelObserverNotifier observerNotifier;
 
     /**
      * Creates a new level for the board.
@@ -96,7 +95,7 @@ public class Level {
         this.startSquareIndex = 0;
         this.players = new ArrayList<>();
         this.collisions = collisionMap;
-        this.observers = new HashSet<>();
+        this.observerNotifier = new LevelObserverNotifier();
     }
 
     /**
@@ -106,7 +105,7 @@ public class Level {
      *            The observer that will be notified.
      */
     public void addObserver(LevelObserver observer) {
-        observers.add(observer);
+        observerNotifier.addObserver(observer);
     }
 
     /**
@@ -116,7 +115,7 @@ public class Level {
      *            The observer to be removed.
      */
     public void removeObserver(LevelObserver observer) {
-        observers.remove(observer);
+        observerNotifier.removeObserver(observer);
     }
 
     /**
@@ -228,14 +227,10 @@ public class Level {
      */
     private void updateObservers() {
         if (!isAnyPlayerAlive()) {
-            for (LevelObserver observer : observers) {
-                observer.levelLost();
-            }
+            observerNotifier.notifyLevelLoss();
         }
         if (remainingPellets() == 0) {
-            for (LevelObserver observer : observers) {
-                observer.levelWon();
-            }
+            observerNotifier.notifyLevelWon();
         }
     }
 
