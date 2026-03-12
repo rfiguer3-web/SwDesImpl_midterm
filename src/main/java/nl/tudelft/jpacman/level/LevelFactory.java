@@ -74,20 +74,15 @@ public class LevelFactory {
     /**
      * Creates a new level from the provided data.
      *
-     * @param board
-     *            The board with all ghosts and pellets occupying their squares.
-     * @param ghosts
-     *            A list of all ghosts on the board.
-     * @param startPositions
-     *            A list of squares from which players may start the game.
+     * @param levelData A data class storing the board, ghosts, and starting positions
      * @return A new level for the board.
      */
-    public Level createLevel(Board board, List<Ghost> ghosts, List<Square> startPositions) {
+    public Level createLevel(LevelData levelData) {
 
         // We'll adopt the simple collision map for now.
         CollisionMap collisionMap = new PlayerCollisions(pointCalculator);
 
-        return new Level(board, ghosts, startPositions, collisionMap);
+        return new Level(levelData, collisionMap);
     }
 
     /**

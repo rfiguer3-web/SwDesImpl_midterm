@@ -73,7 +73,8 @@ public class MapParser {
         makeGrid(map, width, height, grid, ghosts, startPositions);
 
         Board board = boardCreator.createBoard(grid);
-        return levelCreator.createLevel(board, ghosts, startPositions);
+        LevelData levelData = new LevelData(board, ghosts, startPositions);
+        return levelCreator.createLevel(levelData);
     }
 
     private void makeGrid(char[][] map, int width, int height,

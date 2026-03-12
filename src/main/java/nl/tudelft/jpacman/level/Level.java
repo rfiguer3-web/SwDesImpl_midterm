@@ -7,7 +7,6 @@ import nl.tudelft.jpacman.board.Board;
 import nl.tudelft.jpacman.board.Direction;
 import nl.tudelft.jpacman.board.Square;
 import nl.tudelft.jpacman.board.Unit;
-import nl.tudelft.jpacman.npc.Ghost;
 
 /**
  * A level of Pac-Man. A level consists of the board with the players and the
@@ -82,16 +81,14 @@ public class Level {
      * @param collisionMap
      *            The collection of collisions that should be handled.
      */
-    public Level(Board board, List<Ghost> ghosts, List<Square> startPositions,
-                 CollisionMap collisionMap) {
-        assert board != null;
-        assert ghosts != null;
-        assert startPositions != null;
+    public Level(LevelData levelData, CollisionMap collisionMap) {
+        assert levelData != null;
+        assert collisionMap != null;
 
-        this.board = board;
+        this.board = levelData.getBoard();
         this.inProgress = false;
-        this.npcScheduler = new NPCScheduler(ghosts, this);
-        this.startSquares = startPositions;
+        this.npcScheduler = new NPCScheduler(levelData.getGhosts(), this);
+        this.startSquares = levelData.getStartPositions();
         this.startSquareIndex = 0;
         this.players = new ArrayList<>();
         this.collisions = collisionMap;
