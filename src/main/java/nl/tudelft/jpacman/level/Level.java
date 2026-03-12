@@ -72,14 +72,8 @@ public class Level {
     /**
      * Creates a new level for the board.
      *
-     * @param board
-     *            The board for the level.
-     * @param ghosts
-     *            The ghosts on the board.
-     * @param startPositions
-     *            The squares on which players start on this board.
-     * @param collisionMap
-     *            The collection of collisions that should be handled.
+     * @param levelData A data class storing the board, ghosts, and starting positions
+     * @param collisionMap The collection of collisions that should be handled.
      */
     public Level(LevelData levelData, CollisionMap collisionMap) {
         assert levelData != null;
