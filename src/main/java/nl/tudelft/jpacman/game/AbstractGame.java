@@ -13,7 +13,7 @@ import nl.tudelft.jpacman.points.PointCalculator;
  *
  * @author Jeroen Roosen 
  */
-public abstract class Game implements LevelObserver {
+public abstract class AbstractGame implements LevelObserver {
 
     /**
      * <code>true</code> if the game is in progress.
@@ -29,7 +29,7 @@ public abstract class Game implements LevelObserver {
      * The algorithm used to calculate the points that
      * they player gets whenever some action happens.
      */
-    private PointCalculator pointCalculator;
+    private final PointCalculator pointCalculator;
 
     /**
      * Creates a new game.
@@ -37,7 +37,7 @@ public abstract class Game implements LevelObserver {
      * @param pointCalculator
      *             The way to calculate points upon collisions.
      */
-    protected Game(PointCalculator pointCalculator) {
+    protected AbstractGame(PointCalculator pointCalculator) {
         this.pointCalculator = pointCalculator;
         inProgress = false;
     }
@@ -50,10 +50,11 @@ public abstract class Game implements LevelObserver {
             if (isInProgress()) {
                 return;
             }
-            if (getLevel().isAnyPlayerAlive() && getLevel().remainingPellets() > 0) {
+            Level level = getLevel();
+            if (level.isAnyPlayerAlive() && level.remainingPellets() > 0) {
                 inProgress = true;
-                getLevel().addObserver(this);
-                getLevel().start();
+                level.addObserver(this);
+                level.start();
             }
         }
     }
@@ -67,7 +68,8 @@ public abstract class Game implements LevelObserver {
                 return;
             }
             inProgress = false;
-            getLevel().stop();
+            Level level = getLevel();
+            level.stop();
         }
     }
 
@@ -99,7 +101,8 @@ public abstract class Game implements LevelObserver {
     public void move(Player player, Direction direction) {
         if (isInProgress()) {
             // execute player move.
-            getLevel().move(player, direction);
+            Level level = getLevel();
+            level.move(player, direction);
             pointCalculator.pacmanMoved(player, direction);
         }
     }
