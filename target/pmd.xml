@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2026-03-11T16:49:05.809">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2026-03-11T20:56:28.865">
 <file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\Launcher.java">
 <violation beginline="30" endline="213" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="nl.tudelft.jpacman" class="Launcher" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
 Each class should declare at least one constructor
@@ -239,39 +239,42 @@ Parameter 'amountToLookAhead' is not assigned and could be declared final
 Local variable 'targetDirection' could be declared final
 </violation>
 </file>
-<file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\game\Game.java">
-<violation beginline="16" endline="116" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="Game" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
-Abstract classes should be named AbstractXXX
-</violation>
-<violation beginline="32" endline="32" begincolumn="29" endcolumn="43" rule="ImmutableField" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" variable="pointCalculator" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#immutablefield" priority="3">
-Private field 'pointCalculator' could be made final; it is only initialized in the declaration or constructor.
-</violation>
-<violation beginline="40" endline="40" begincolumn="20" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="Game" method="Game" variable="pointCalculator" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\game\AbstractGame.java">
+<violation beginline="40" endline="40" begincolumn="28" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="AbstractGame" method="AbstractGame" variable="pointCalculator" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'pointCalculator' is not assigned and could be declared final
 </violation>
-<violation beginline="53" endline="53" begincolumn="17" endcolumn="45" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
+<violation beginline="53" endline="53" begincolumn="13" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="AbstractGame" method="start" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'level' could be declared final
 </violation>
-<violation beginline="53" endline="53" begincolumn="50" endcolumn="78" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
+<violation beginline="54" endline="54" begincolumn="17" endcolumn="40" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="AbstractGame" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="55" endline="55" begincolumn="17" endcolumn="44" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
+<violation beginline="54" endline="54" begincolumn="45" endcolumn="68" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="AbstractGame" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="56" endline="56" begincolumn="17" endcolumn="34" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
+<violation beginline="56" endline="56" begincolumn="17" endcolumn="39" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="AbstractGame" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="70" endline="70" begincolumn="13" endcolumn="29" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" method="stop" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
+<violation beginline="57" endline="57" begincolumn="17" endcolumn="29" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="AbstractGame" method="start" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="99" endline="99" begincolumn="37" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="Game" method="move" variable="direction" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="71" endline="71" begincolumn="13" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="AbstractGame" method="stop" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'level' could be declared final
+</violation>
+<violation beginline="72" endline="72" begincolumn="13" endcolumn="24" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="AbstractGame" method="stop" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="101" endline="101" begincolumn="37" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="AbstractGame" method="move" variable="direction" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'direction' is not assigned and could be declared final
 </violation>
-<violation beginline="99" endline="99" begincolumn="22" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="Game" method="move" variable="player" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="101" endline="101" begincolumn="22" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="AbstractGame" method="move" variable="player" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'player' is not assigned and could be declared final
 </violation>
-<violation beginline="102" endline="102" begincolumn="13" endcolumn="46" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="Game" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
+<violation beginline="104" endline="104" begincolumn="13" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.game" class="AbstractGame" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'level' could be declared final
+</violation>
+<violation beginline="105" endline="105" begincolumn="13" endcolumn="41" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.game" class="AbstractGame" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
 </violation>
 </file>
 <file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\game\GameFactory.java">
@@ -433,113 +436,76 @@ Local variable 'collisionMap' could be declared final
 </violation>
 </file>
 <file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\Level.java">
-<violation beginline="93" endline="93" begincolumn="18" endcolumn="28" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="board" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'board' is not assigned and could be declared final
-</violation>
-<violation beginline="93" endline="93" begincolumn="31" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'ghosts' is not assigned and could be declared final
-</violation>
-<violation beginline="93" endline="93" begincolumn="51" endcolumn="77" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'startPositions' is not assigned and could be declared final
-</violation>
-<violation beginline="94" endline="94" begincolumn="18" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="collisionMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="78" endline="78" begincolumn="39" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="collisionMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'collisionMap' is not assigned and could be declared final
 </violation>
-<violation beginline="102" endline="102" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'ghost' could be declared final
+<violation beginline="78" endline="78" begincolumn="18" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="Level" variable="levelData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'levelData' is not assigned and could be declared final
 </violation>
-<violation beginline="118" endline="118" begincolumn="29" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="addObserver" variable="observer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="98" endline="98" begincolumn="29" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="addObserver" variable="observer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'observer' is not assigned and could be declared final
 </violation>
-<violation beginline="128" endline="128" begincolumn="32" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="removeObserver" variable="observer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="108" endline="108" begincolumn="32" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="removeObserver" variable="observer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'observer' is not assigned and could be declared final
 </violation>
-<violation beginline="140" endline="140" begincolumn="32" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="registerPlayer" variable="player" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="120" endline="120" begincolumn="32" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="registerPlayer" variable="player" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'player' is not assigned and could be declared final
 </violation>
-<violation beginline="148" endline="148" begincolumn="9" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="registerPlayer" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="128" endline="128" begincolumn="9" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="registerPlayer" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'square' could be declared final
 </violation>
-<violation beginline="172" endline="172" begincolumn="33" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="direction" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="152" endline="152" begincolumn="33" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="direction" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'direction' is not assigned and could be declared final
 </violation>
-<violation beginline="172" endline="172" begincolumn="22" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="unit" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="152" endline="152" begincolumn="22" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="unit" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'unit' is not assigned and could be declared final
 </violation>
-<violation beginline="183" endline="183" begincolumn="13" endcolumn="46" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="163" endline="163" begincolumn="13" endcolumn="46" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'location' could be declared final
 </violation>
-<violation beginline="184" endline="184" begincolumn="13" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="164" endline="164" begincolumn="13" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'destination' could be declared final
 </violation>
-<violation beginline="184" endline="184" begincolumn="34" endcolumn="64" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="164" endline="164" begincolumn="34" endcolumn="64" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="186" endline="186" begincolumn="17" endcolumn="48" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="166" endline="166" begincolumn="17" endcolumn="48" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="187" endline="187" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="167" endline="167" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'occupants' could be declared final
 </violation>
-<violation beginline="187" endline="187" begincolumn="40" endcolumn="65" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="167" endline="167" begincolumn="40" endcolumn="65" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="move" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="189" endline="189" begincolumn="22" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="169" endline="169" begincolumn="22" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="move" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'occupant' could be declared final
 </violation>
-<violation beginline="231" endline="231" begincolumn="38" endcolumn="44" rule="CloseResource" ruleset="Error Prone" package="nl.tudelft.jpacman.level" class="Level" method="startNPCs" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
-Ensure that resources like this ScheduledExecutorService object are closed after use
-</violation>
-<violation beginline="231" endline="231" begincolumn="13" endcolumn="91" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="startNPCs" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'service' could be declared final
-</violation>
-<violation beginline="245" endline="245" begincolumn="14" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="stopNPCs" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'entry' could be declared final
-</violation>
-<violation beginline="246" endline="246" begincolumn="38" endcolumn="45" rule="CloseResource" ruleset="Error Prone" package="nl.tudelft.jpacman.level" class="Level" method="stopNPCs" variable="schedule" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
-Ensure that resources like this ScheduledExecutorService object are closed after use
-</violation>
-<violation beginline="246" endline="246" begincolumn="13" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="stopNPCs" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'schedule' could be declared final
-</violation>
-<violation beginline="248" endline="248" begincolumn="13" endcolumn="34" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="stopNPCs" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
-Potential violation of Law of Demeter (object not created locally)
-</violation>
-<violation beginline="267" endline="267" begincolumn="18" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="updateObservers" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'observer' could be declared final
-</violation>
-<violation beginline="272" endline="272" begincolumn="18" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="updateObservers" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'observer' could be declared final
-</violation>
-<violation beginline="286" endline="286" begincolumn="14" endcolumn="26" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="isAnyPlayerAlive" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="236" endline="236" begincolumn="14" endcolumn="26" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="isAnyPlayerAlive" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'player' could be declared final
 </violation>
-<violation beginline="288" endline="288" begincolumn="17" endcolumn="28" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="isAnyPlayerAlive" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="238" endline="238" begincolumn="17" endcolumn="28" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="isAnyPlayerAlive" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="300" endline="300" begincolumn="9" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="remainingPellets" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="250" endline="250" begincolumn="9" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="remainingPellets" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'board' could be declared final
 </violation>
-<violation beginline="304" endline="304" begincolumn="22" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="remainingPellets" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="254" endline="254" begincolumn="22" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level" method="remainingPellets" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'unit' could be declared final
 </violation>
-<violation beginline="304" endline="304" begincolumn="34" endcolumn="68" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="remainingPellets" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="254" endline="254" begincolumn="34" endcolumn="68" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="Level" method="remainingPellets" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="340" endline="340" begincolumn="55" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level$NpcMoveTask" method="NpcMoveTask" variable="npc" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'npc' is not assigned and could be declared final
+</file>
+<file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\LevelData.java">
+<violation beginline="34" endline="34" begincolumn="22" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelData" method="LevelData" variable="board" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'board' is not assigned and could be declared final
 </violation>
-<violation beginline="340" endline="340" begincolumn="21" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level$NpcMoveTask" method="NpcMoveTask" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'service' is not assigned and could be declared final
+<violation beginline="34" endline="34" begincolumn="35" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelData" method="LevelData" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ghosts' is not assigned and could be declared final
 </violation>
-<violation beginline="340" endline="343" begincolumn="9" endcolumn="9" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level$NpcMoveTask" method="NpcMoveTask" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
-To avoid mistakes add a comment at the beginning of the NpcMoveTask constructor if you want a default access modifier
-</violation>
-<violation beginline="347" endline="347" begincolumn="13" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level$NpcMoveTask" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'nextMove' could be declared final
-</violation>
-<violation beginline="351" endline="351" begincolumn="13" endcolumn="45" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="Level$NpcMoveTask" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'interval' could be declared final
+<violation beginline="34" endline="34" begincolumn="55" endcolumn="81" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelData" method="LevelData" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'startPositions' is not assigned and could be declared final
 </violation>
 </file>
 <file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\LevelFactory.java">
@@ -552,41 +518,49 @@ Parameter 'ghostFactory' is not assigned and could be declared final
 <violation beginline="67" endline="67" begincolumn="25" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="LevelFactory" variable="pointCalculator" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'pointCalculator' is not assigned and could be declared final
 </violation>
-<violation beginline="85" endline="85" begincolumn="30" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createLevel" variable="board" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'board' is not assigned and could be declared final
+<violation beginline="80" endline="80" begincolumn="30" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createLevel" variable="levelData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'levelData' is not assigned and could be declared final
 </violation>
-<violation beginline="85" endline="85" begincolumn="43" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createLevel" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'ghosts' is not assigned and could be declared final
-</violation>
-<violation beginline="85" endline="85" begincolumn="63" endcolumn="89" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createLevel" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'startPositions' is not assigned and could be declared final
-</violation>
-<violation beginline="88" endline="88" begincolumn="9" endcolumn="73" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createLevel" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="83" endline="83" begincolumn="9" endcolumn="73" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createLevel" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'collisionMap' could be declared final
 </violation>
-<violation beginline="98" endline="113" begincolumn="5" endcolumn="5" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+<violation beginline="93" endline="108" begincolumn="5" endcolumn="5" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
 To avoid mistakes add a comment at the beginning of the createGhost method if you want a default access modifier
 </violation>
-<violation beginline="98" endline="113" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#defaultpackage" priority="3">
+<violation beginline="93" endline="108" begincolumn="5" endcolumn="5" rule="DefaultPackage" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#defaultpackage" priority="3">
 Use explicit scoping instead of the default package private level
 </violation>
-<violation beginline="103" endline="103" begincolumn="17" endcolumn="48" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="98" endline="98" begincolumn="17" endcolumn="48" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="105" endline="105" begincolumn="17" endcolumn="46" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="100" endline="100" begincolumn="17" endcolumn="46" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="107" endline="107" begincolumn="17" endcolumn="47" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="102" endline="102" begincolumn="17" endcolumn="47" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="109" endline="109" begincolumn="17" endcolumn="47" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+<violation beginline="104" endline="104" begincolumn="17" endcolumn="47" rule="OnlyOneReturn" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory" method="createGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
 A method should have only one exit point, and that should be the last statement in the method
 </violation>
-<violation beginline="142" endline="142" begincolumn="21" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory$RandomGhost" method="RandomGhost" variable="ghostSprite" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="137" endline="137" begincolumn="21" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory$RandomGhost" method="RandomGhost" variable="ghostSprite" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'ghostSprite' is not assigned and could be declared final
 </violation>
-<violation beginline="142" endline="144" begincolumn="9" endcolumn="9" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory$RandomGhost" method="RandomGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+<violation beginline="137" endline="139" begincolumn="9" endcolumn="9" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelFactory$RandomGhost" method="RandomGhost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
 To avoid mistakes add a comment at the beginning of the RandomGhost constructor if you want a default access modifier
+</violation>
+</file>
+<file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\LevelObserverNotifier.java">
+<violation beginline="29" endline="29" begincolumn="29" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelObserverNotifier" method="addObserver" variable="observer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'observer' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="32" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelObserverNotifier" method="removeObserver" variable="observer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'observer' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="14" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelObserverNotifier" method="notifyLevelLoss" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'observer' could be declared final
+</violation>
+<violation beginline="54" endline="54" begincolumn="14" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="LevelObserverNotifier" method="notifyLevelWon" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'observer' could be declared final
 </violation>
 </file>
 <file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\MapParser.java">
@@ -617,113 +591,151 @@ Local variable 'startPositions' could be declared final
 <violation beginline="75" endline="75" begincolumn="9" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'board' could be declared final
 </violation>
-<violation beginline="79" endline="79" begincolumn="52" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="height" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="76" endline="76" begincolumn="9" endcolumn="74" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'levelData' could be declared final
+</violation>
+<violation beginline="80" endline="80" begincolumn="52" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="height" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'height' is not assigned and could be declared final
 </violation>
-<violation beginline="79" endline="79" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="map" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="80" endline="80" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="map" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'map' is not assigned and could be declared final
 </violation>
-<violation beginline="79" endline="79" begincolumn="41" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="width" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="80" endline="80" begincolumn="41" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="width" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'width' is not assigned and could be declared final
 </violation>
-<violation beginline="80" endline="80" begincolumn="44" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="81" endline="81" begincolumn="44" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'ghosts' is not assigned and could be declared final
 </violation>
-<violation beginline="80" endline="80" begincolumn="27" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="grid" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="81" endline="81" begincolumn="27" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="grid" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'grid' is not assigned and could be declared final
 </violation>
-<violation beginline="80" endline="80" begincolumn="64" endcolumn="90" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="81" endline="81" begincolumn="64" endcolumn="90" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'startPositions' is not assigned and could be declared final
 </violation>
-<violation beginline="83" endline="83" begincolumn="22" endcolumn="22" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="84" endline="84" begincolumn="22" endcolumn="22" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like c
 </violation>
-<violation beginline="83" endline="83" begincolumn="17" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="84" endline="84" begincolumn="17" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGrid" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'c' could be declared final
 </violation>
-<violation beginline="109" endline="109" begincolumn="47" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="110" endline="110" begincolumn="47" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'ghosts' is not assigned and could be declared final
 </violation>
-<violation beginline="110" endline="110" begincolumn="78" endcolumn="78" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="111" endline="111" begincolumn="78" endcolumn="78" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like c
 </violation>
-<violation beginline="110" endline="110" begincolumn="63" endcolumn="63" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="111" endline="111" begincolumn="63" endcolumn="63" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like x
 </violation>
-<violation beginline="110" endline="110" begincolumn="70" endcolumn="70" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+<violation beginline="111" endline="111" begincolumn="70" endcolumn="70" rule="ShortVariable" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
 Avoid variables with short names like y
 </violation>
-<violation beginline="110" endline="110" begincolumn="73" endcolumn="78" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="111" endline="111" begincolumn="73" endcolumn="78" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'c' is not assigned and could be declared final
 </violation>
-<violation beginline="110" endline="110" begincolumn="30" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="111" endline="111" begincolumn="30" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="startPositions" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'startPositions' is not assigned and could be declared final
 </violation>
-<violation beginline="110" endline="110" begincolumn="59" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="111" endline="111" begincolumn="59" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'x' is not assigned and could be declared final
 </violation>
-<violation beginline="110" endline="110" begincolumn="66" endcolumn="70" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="111" endline="111" begincolumn="66" endcolumn="70" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="y" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'y' is not assigned and could be declared final
 </violation>
-<violation beginline="119" endline="119" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="120" endline="120" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'pelletSquare' could be declared final
 </violation>
-<violation beginline="121" endline="121" begincolumn="17" endcolumn="64" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="122" endline="122" begincolumn="17" endcolumn="64" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="124" endline="124" begincolumn="17" endcolumn="88" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="125" endline="125" begincolumn="17" endcolumn="88" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'ghostSquare' could be declared final
 </violation>
-<violation beginline="128" endline="128" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="129" endline="129" begincolumn="17" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="addSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'playerSquare' could be declared final
 </violation>
-<violation beginline="146" endline="146" begincolumn="58" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGhostSquare" variable="ghost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="147" endline="147" begincolumn="58" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGhostSquare" variable="ghost" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'ghost' is not assigned and could be declared final
 </violation>
-<violation beginline="146" endline="146" begincolumn="38" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGhostSquare" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="147" endline="147" begincolumn="38" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGhostSquare" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'ghosts' is not assigned and could be declared final
 </violation>
-<violation beginline="147" endline="147" begincolumn="9" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGhostSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="148" endline="148" begincolumn="9" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="makeGhostSquare" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'ghostSquare' could be declared final
 </violation>
-<violation beginline="164" endline="164" begincolumn="27" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="text" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="165" endline="165" begincolumn="27" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="text" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'text' is not assigned and could be declared final
 </violation>
-<violation beginline="168" endline="168" begincolumn="9" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="169" endline="169" begincolumn="9" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'height' could be declared final
 </violation>
-<violation beginline="169" endline="169" begincolumn="9" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="170" endline="170" begincolumn="9" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'width' could be declared final
 </violation>
-<violation beginline="169" endline="169" begincolumn="21" endcolumn="40" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="170" endline="170" begincolumn="21" endcolumn="40" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="174" endline="174" begincolumn="29" endcolumn="49" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="175" endline="175" begincolumn="29" endcolumn="49" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="185" endline="185" begincolumn="33" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" variable="text" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="186" endline="186" begincolumn="33" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" variable="text" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'text' is not assigned and could be declared final
 </violation>
-<violation beginline="185" endline="209" begincolumn="13" endcolumn="5" rule="CyclomaticComplexity" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
+<violation beginline="186" endline="210" begincolumn="13" endcolumn="5" rule="CyclomaticComplexity" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
 The method 'checkMapFormat(List)' has a cyclomatic complexity of 10.
 </violation>
-<violation beginline="196" endline="196" begincolumn="9" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="197" endline="197" begincolumn="9" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'width' could be declared final
 </violation>
-<violation beginline="196" endline="196" begincolumn="21" endcolumn="40" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="197" endline="197" begincolumn="21" endcolumn="40" rule="LawOfDemeter" ruleset="Design" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="203" endline="203" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="204" endline="204" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="checkMapFormat" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'line' could be declared final
 </violation>
-<violation beginline="221" endline="221" begincolumn="27" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="source" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="222" endline="222" begincolumn="27" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="source" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'source' is not assigned and could be declared final
 </violation>
-<violation beginline="224" endline="224" begincolumn="13" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+<violation beginline="225" endline="225" begincolumn="13" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'lines' could be declared final
 </violation>
-<violation beginline="246" endline="246" begincolumn="27" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="mapName" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="247" endline="247" begincolumn="27" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="MapParser" method="parseMap" variable="mapName" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'mapName' is not assigned and could be declared final
+</violation>
+</file>
+<file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\NPCScheduler.java">
+<violation beginline="30" endline="30" begincolumn="25" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="NPCScheduler" variable="ghosts" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ghosts' is not assigned and could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="49" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="NPCScheduler" variable="level" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'level' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="NPCScheduler" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'ghost' could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="38" endcolumn="44" rule="CloseResource" ruleset="Error Prone" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="startNPCs" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this ScheduledExecutorService object are closed after use
+</violation>
+<violation beginline="43" endline="43" begincolumn="13" endcolumn="91" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="startNPCs" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'service' could be declared final
+</violation>
+<violation beginline="57" endline="57" begincolumn="39" endcolumn="45" rule="CloseResource" ruleset="Error Prone" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="stopNPCs" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this ScheduledExecutorService object are closed after use
+</violation>
+<violation beginline="57" endline="57" begincolumn="14" endcolumn="45" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler" method="stopNPCs" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'service' could be declared final
+</violation>
+<violation beginline="71" endline="71" begincolumn="62" endcolumn="70" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler$NPCMoveTask" method="NPCMoveTask" variable="npc" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'npc' is not assigned and could be declared final
+</violation>
+<violation beginline="71" endline="71" begincolumn="28" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler$NPCMoveTask" method="NPCMoveTask" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'service' is not assigned and could be declared final
+</violation>
+<violation beginline="78" endline="78" begincolumn="13" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler$NPCMoveTask" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'nextMove' could be declared final
+</violation>
+<violation beginline="82" endline="82" begincolumn="13" endcolumn="45" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="nl.tudelft.jpacman.level" class="NPCScheduler$NPCMoveTask" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'interval' could be declared final
 </violation>
 </file>
 <file name="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\Pellet.java">
@@ -1749,6 +1761,5 @@ Parameter 'scoreFormatter' is not assigned and could be declared final
 </violation>
 </file>
 <suppressedviolation filename="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\board\Board.java" suppressiontype="annotation" msg="The user-supplied array 'grid' is stored directly." usermsg=""></suppressedviolation>
-<suppressedviolation filename="C:\Users\whsm\Documents\ITCS6112\SwDesImpl_midterm\src\main\java\nl\tudelft\jpacman\level\Level.java" suppressiontype="annotation" msg="This class has too many methods, consider refactoring it." usermsg=""></suppressedviolation>
 <configerror rule="LoosePackageCoupling" msg="No packages or classes specified"/>
 </pmd>
